@@ -2,6 +2,7 @@ import dva from 'dva';
 import './index.css';
 import createLoading from 'dva-loading';
 
+window._ = require('lodash')
 // 1. Initialize
 // import createHistory from 'history/createBrowserHistory';
 const app = dva({

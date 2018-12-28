@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Table, Pagination, Popconfirm,message } from 'antd';
 import styles from './Users.css'
 import { PAGE_SIZE } from '../constants';
-import MainLayout from '../components/MainLayout/MainLayout';
+// import MainLayout from '../components/MainLayout/MainLayout';
 
 const Users = (props) => {
   function deleteHandler(id){
@@ -51,26 +51,24 @@ const Users = (props) => {
     },
   ];
   return (
-    <MainLayout location={props.location}>
-      <div className={styles.normal}>
-        <div>
-          <Table
-            columns={columns}
-            dataSource={props.list}
-            loading={props.loading}
-            rowKey={record => record.id}
-            pagination={false}
-          />
-          <Pagination
-            className="ant-table-pagination"
-            total={props.total}
-            current={props.page}
-            onChange={pageChangeHandler}
-            pageSize={PAGE_SIZE}
-          />
-        </div>
+    <div className={styles.normal}>
+      <div>
+        <Table
+          columns={columns}
+          dataSource={props.list}
+          loading={props.loading}
+          rowKey={record => record.id}
+          pagination={false}
+        />
+        <Pagination
+          className="ant-table-pagination"
+          total={props.total}
+          current={props.page}
+          onChange={pageChangeHandler}
+          pageSize={PAGE_SIZE}
+        />
       </div>
-    </MainLayout>
+    </div>
   )
 
 }

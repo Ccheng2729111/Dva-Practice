@@ -1,6 +1,6 @@
 export default {
-  namespace: 'count',
-  state: 0,
+  namespace: 'countFn',
+  state: 1,
   reducers: {
     add  (count) { return count + 1 },
     minus(count) { return count - 1 },

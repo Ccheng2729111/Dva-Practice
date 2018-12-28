@@ -3,17 +3,17 @@ import { connect } from 'dva';
 import { Button } from 'antd';
 // import ProductList from '../components/ProductList'
 
-const CountPage = ({ dispatch,count }) => {
+const CountPage = ({ dispatch,countFn }) => {
   return (
     <div>
       <h2>Count of example</h2>
-      <h2>{count}</h2>
-      <Button onClick={()=>{dispatch({type:'count/add'})}}>+</Button>
-      <Button onClick={()=>{dispatch({type:'count/minus'})}}>-</Button>
+      <h2>{countFn}</h2>
+      <Button onClick={()=>{dispatch({type:'countFn/add'})}}>+</Button>
+      <Button onClick={()=>{dispatch({type:'countFn/minus'})}}>-</Button>
     </div>
   )
 
 }
-export default connect(({ count }) => ({
-  count,
+export default connect(({ countFn }) => ({
+  countFn,
 }))(CountPage);
