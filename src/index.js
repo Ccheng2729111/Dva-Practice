@@ -24,7 +24,7 @@ app.use(createLoading());
 // const models=[products,counts,users,todoList];
 
 // models.forEach(m=>app.model(m))
-app.model(require('./models/counts').default);
+// app.model(require('./models/counts').default);
 
 // 4. Router
 app.router(require('./router').default);
