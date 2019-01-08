@@ -1,10 +1,12 @@
 const Mock=require('mockjs');
-
 let db=Mock.mock({
-  'data|3-6':[{
+  'list|6-10':[{
     id:'@id',
-    name:'@name',
-    'age|18-32':1
+    name:'@cname',
+    Email:'@email',
+    Website:Mock.Random.url(),
+    birthday: '@date("yyyy-MM-dd")',  // 日期
+    city: '@city(true)',   // 中国城市
   }]
 });
 
@@ -14,12 +16,12 @@ module.exports={
     res.status(200).json(db);
   },
 
-  [`POST /api/users`](req,res){
+  [`DELETE /api/users`](req,res){
 
     let user=req.body;
     console.log(req);
     user.id=Mock.mock('@id');
-    db.data.push(user);
+    db.data.filter((i)=>i.id===user.id);
 
     res.status(200).json(user);
   }

@@ -22,20 +22,30 @@ const Users = (props) => {
   }
   const columns = [
     {
-      title: 'Name',
+      title: 'name',
       dataIndex: 'name',
       key: 'name',
       render: text => <a href="">{text}</a>,
     },
     {
       title: 'Email',
-      dataIndex: 'email',
-      key: 'email',
+      dataIndex: 'Email',
+      key: 'Email',
     },
     {
       title: 'Website',
-      dataIndex: 'website',
-      key: 'website',
+      dataIndex: 'Website',
+      key: 'Website',
+    },
+    {
+      title: 'birthday',
+      dataIndex: 'birthday',
+      key: 'birthday',
+    },
+    {
+      title: 'city',
+      dataIndex: 'city',
+      key: 'city',
     },
     {
       title: 'Operation',
@@ -55,18 +65,18 @@ const Users = (props) => {
       <div>
         <Table
           columns={columns}
-          dataSource={props.list}
+          dataSource={props.list.list}
           loading={props.loading}
           rowKey={record => record.id}
-          pagination={false}
+          // pagination={false}
         />
-        <Pagination
+        {/*<Pagination
           className="ant-table-pagination"
           total={props.total}
           current={props.page}
           onChange={pageChangeHandler}
           pageSize={PAGE_SIZE}
-        />
+        />*/}
       </div>
     </div>
   )

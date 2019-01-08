@@ -38,7 +38,7 @@ class LayoutCom extends Component {
     }
   }
   render() {
-    const { app,history } = this.state
+    const { app } = this.state
     const Products = dynamic({
       app,
       models: () => [

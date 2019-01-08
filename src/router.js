@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route,Redirect} from 'dva/router';
+import { Router, Route} from 'dva/router';
 import LayoutCom from './routes/LayoutCom'
 
 function RouterConfig(props) {

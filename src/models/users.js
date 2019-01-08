@@ -33,7 +33,7 @@ export default {
   subscriptions: {
     setup({ dispatch, history }) {
       return history.listen(({ pathname, query }) => {
-        if (pathname === '/Users') {
+        if (pathname === '/users') {
           dispatch({ type: 'fetch', payload: queryString.parse(query) });
         }
       });
