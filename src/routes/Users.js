@@ -14,7 +14,6 @@ const Users = (props) => {
     message.success('delete success!')
   }
   function pageChangeHandler(page) {
-    // console.log(page)
     props.dispatch({
       type:'users/fetch',
       payload:{page : page}
